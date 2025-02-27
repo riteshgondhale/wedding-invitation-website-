@@ -5,7 +5,7 @@ const slideImg = document.getElementById("slide");
 
 function changeSlide() {
     currentSlide = (currentSlide % totalSlides) + 1;
-    slideImg.src = images/slide${currentSlide}.jpg;
+    slideImg.src = `images/slide${currentSlide}.jpg`;
 }
 
 setInterval(changeSlide, 2000); // Change every 2 seconds
@@ -18,14 +18,14 @@ function updateCountdown() {
     const timeLeft = weddingDate - now;
 
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hr = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const min = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const sec = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
     document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hr;
-    document.getElementById("minutes").innerText = min;
-    document.getElementById("seconds").innerText = sec;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
 }
 
 setInterval(updateCountdown, 1000);
