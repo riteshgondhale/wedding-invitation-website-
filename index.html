@@ -3,63 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
+    <title>Vishal & Priyanka - Wedding Invitation</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- Hero Section -->
+    <!-- Header Section -->
     <header class="hero">
-        <h1>You're Invited to Our Wedding!</h1>
-        <p>Join us for a beautiful celebration of love.</p>
-        <img src="images/your-hero-image.jpg" alt="Wedding Couple" class="hero-image">
-    </header>
-
-    <!-- Countdown Timer -->
-    <section class="countdown">
-        <h2>Save the Date</h2>
-        <p id="timer"></p>
-    </section>
-
-    <!-- About the Couple -->
-    <section class="about">
-        <h2>Meet the Couple</h2>
-        <div class="couple">
-            <img src="images/your-bride-image.jpg" alt="Bride">
-            <img src="images/your-groom-image.jpg" alt="Groom">
+        <div class="overlay">
+            <h1>Vishal & Priyanka</h1>
+            <p>We're Getting Married!</p>
         </div>
-        <p>We are excited to begin our journey together. Come celebrate with us!</p>
-    </section>
+    </header>
 
     <!-- Wedding Details -->
     <section class="details">
-        <h2>Wedding Details</h2>
-        <p><strong>Date:</strong> [Your Wedding Date]</p>
-        <p><strong>Time:</strong> [Wedding Time]</p>
-        <p><strong>Venue:</strong> [Wedding Venue]</p>
+        <h2>Wedding Ceremony</h2>
+        <p>📅 Date: March 2, 2025 | 🕒 Time: 11:30 AM</p>
+        <p>📍 Venue: Shree Kothimbir Samarth Mandir, Solapur</p>
+        
+        <h3>Haldi & Mehendi Ceremony</h3>
+        <p>📅 Date: March 1, 2025 | 🕒 Time: 8:00 PM</p>
+
+        <h3>Grand Wedding Feast</h3>
+        <p>🍽️ Lunch: 12:00 PM - 3:00 PM</p>
     </section>
 
-    <!-- 📸 Image Gallery Section -->
+    <!-- Image Gallery -->
     <section class="gallery">
         <h2>Pre-Wedding Moments</h2>
-        <div class="slideshow-container">
-            <img id="galleryImage" src="images/slide1.jpg" alt="Pre-Wedding Photo">
-            <button class="prev" onclick="prevSlide()">❮</button>
-            <button class="next" onclick="nextSlide()">❯</button>
+        <div class="slider">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="slide-container">
+                <img src="images/slide1.jpg" class="slide">
+                <img src="images/slide2.jpg" class="slide">
+                <img src="images/slide3.jpg" class="slide">
+                <img src="images/slide4.jpg" class="slide">
+                <img src="images/slide5.jpg" class="slide">
+                <img src="images/slide6.jpg" class="slide">
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
     </section>
 
-    <!-- RSVP Section -->
-    <section class="rsvp">
-        <h2>RSVP Now</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>With love, The Naik & Choudhari Family</p>
+    </footer>
 
 </body>
 </html>
