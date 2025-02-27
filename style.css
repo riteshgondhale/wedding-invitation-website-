@@ -1,123 +1,78 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f5f2;
+    background-color: #f8f4f0;
+    text-align: center;
 }
 
-/* Hero Section */
+/* Header Section */
 .hero {
-    background: #f4e1d2;
-    padding: 50px 20px;
+    background: url('images/slide1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
 }
 
-.hero h1 {
-    font-size: 36px;
-    color: #8b5e3c;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #6b4f3a;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-}
-
-/* Countdown */
-.countdown {
-    margin: 30px 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #6b4f3a;
-}
-
-/* Couple Section */
-.about {
-    background: #fff;
-    padding: 40px 20px;
-}
-
-.couple img {
-    width: 40%;
-    max-width: 250px;
-    margin: 10px;
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
     border-radius: 10px;
 }
 
 /* Wedding Details */
 .details {
-    background: #f4e1d2;
+    background: #fff;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Gallery */
+.gallery {
     padding: 30px;
 }
 
-.details p {
-    font-size: 20px;
-    color: #6b4f3a;
-}
-
-/* 🎉 Gallery Section */
-.gallery {
-    background: #fff;
-    padding: 40px;
-}
-
-.slideshow-container {
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    max-width: 600px;
-    margin: auto;
 }
 
-.slideshow-container img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Prev & Next Buttons */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background: black;
-}
-
-/* RSVP Section */
-.rsvp {
-    background: #fff;
-    padding: 40px;
-}
-
-.rsvp input, .rsvp button {
+.slide-container {
     width: 80%;
-    max-width: 300px;
-    padding: 10px;
-    margin: 10px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.rsvp button {
-    background: #8b5e3c;
+.slide {
+    width: 100%;
+    display: none;
+    transition: transform 0.5s ease;
+}
+
+button {
+    background-color: #d4a373;
     color: white;
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
-  }
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #b47b5e;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
