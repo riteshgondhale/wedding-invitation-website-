@@ -3,62 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal & Priyanka - Wedding Invitation</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header class="hero">
-        <div class="overlay">
-            <h1>💍 Vishal & Priyanka</h1>
-            <p>We're Getting Married! 🎉</p>
-        </div>
-    </header>
-
-    <!-- Wedding Details -->
-    <section class="details">
+    <!-- Wedding Ceremony Details -->
+    <div class="container">
         <h2>💒 Wedding Ceremony</h2>
         <p>📅 <b>Date:</b> March 2, 2025 | ⏰ <b>Time:</b> 11:30 AM</p>
-        <p>📍 <b>Venue:</b> 
-            <a href="https://g.co/kgs/FVu2b7h" target="_blank">R R Dussa Events (Garden & Hall) 🔗</a>
-        </p>
+        
+        <!-- Google Maps Button -->
+        <p>📍 <b>Venue:</b> R R Dussa Events (Garden & Hall)</p>
+        <button onclick="openGoogleMaps()">📍 Open in Google Maps</button>
 
         <h3>💛 Haldi & Mehendi Ceremony</h3>
         <p>📅 <b>Date:</b> March 1, 2025 | ⏰ <b>Time:</b> 8:00 PM</p>
 
         <h3>🍽️ Grand Wedding Feast</h3>
         <p>🥂 <b>Lunch:</b> 12:00 PM - 3:00 PM</p>
-    </section>
+    </div>
 
     <!-- Countdown Timer -->
-    <section class="countdown">
+    <div class="countdown">
         <h2>⏳ Countdown to Our Special Day</h2>
         <div id="timer">
-            <span id="days">00</span> Days 
-            <span id="hours">00</span> Hours 
-            <span id="minutes">00</span> Minutes 
-            <span id="seconds">00</span> Seconds
+            <span id="days"></span> Days 
+            <span id="hours"></span> Hours 
+            <span id="minutes"></span> Minutes 
+            <span id="seconds"></span> Seconds
         </div>
-    </section>
+    </div>
 
     <!-- Image Gallery -->
-    <section class="gallery">
+    <div class="gallery">
         <h2>📸 Pre-Wedding Moments</h2>
-        <div class="slider">
-            <img id="slide" src="images/slide1.jpg">
-            <img src="images/slide2.jpg" class="slide">
-            <img src="images/slide3.jpg" class="slide">
-            <img src="images/slide4.jpg" class="slide">
-            <img src="images/slide5.jpg" class="slide">
-            <img src="images/slide6.jpg" class="slide">
+        <div class="slideshow">
+            <img id="slideImage" src="images/slide1.jpg" alt="Wedding Moment">
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>💖 With love, The Nakod & Choudhari Family 💖</p>
+        💖 With love, The Nakod & Choudhari Family 💖
     </footer>
 
 </body>
