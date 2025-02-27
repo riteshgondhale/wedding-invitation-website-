@@ -42,9 +42,9 @@ h2 {
 .countdown {
     background: #333;
     color: white;
-    padding: 20px;
-    font-size: 20px;
-    margin: 20px;
+    padding: 10px;
+    font-size: 13px;
+    margin: 15px;
 }
 
 #timer span {
