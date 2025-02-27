@@ -1,48 +1,78 @@
-// Countdown Timer
-const weddingDate = new Date("2025-12-15").getTime();
-
-const timer = setInterval(() => {
-    const now = new Date().getTime();
-    const timeLeft = weddingDate - now;
-
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    document.getElementById("timer").innerHTML = 
-        `${days} Days ${hours} Hours ${minutes} Min ${seconds} Sec`;
-
-    if (timeLeft < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "The Wedding Has Started!";
-    }
-}, 1000);
-
-// Image Slideshow
-let slideIndex = 1;
-const totalSlides = 10;
-
-function showSlide(index) {
-    const img = document.getElementById("galleryImage");
-    img.src = `images/slide${index}.jpg`;
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f4f0;
+    text-align: center;
 }
 
-function nextSlide() {
-    slideIndex++;
-    if (slideIndex > totalSlides) {
-        slideIndex = 1;
-    }
-    showSlide(slideIndex);
+/* Header Section */
+.hero {
+    background: url('images/slide1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
 }
 
-function prevSlide() {
-    slideIndex--;
-    if (slideIndex < 1) {
-        slideIndex = totalSlides;
-    }
-    showSlide(slideIndex);
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-// Auto-slide every 3 seconds
-setInterval(nextSlide, 3000);
+/* Wedding Details */
+.details {
+    background: #fff;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Gallery */
+.gallery {
+    padding: 30px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide-container {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    transition: transform 0.5s ease;
+}
+
+button {
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #b47b5e;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+}
