@@ -1,19 +1,11 @@
-// Auto-Sliding Image Gallery
-let currentSlide = 1;
-const totalSlides = 10;
-const slideImg = document.getElementById("slide");
-
-function changeSlide() {
-    currentSlide = (currentSlide % totalSlides) + 1;
-    slideImg.src = `images/slide${currentSlide}.jpg`;
+// Open Google Maps when button is clicked
+function openGoogleMaps() {
+    window.open("https://g.co/kgs/FVu2b7h", "_blank");
 }
 
-setInterval(changeSlide, 2000); // Change every 2 seconds
-
-// Countdown Timer
-const weddingDate = new Date("March 2, 2025 11:30:00").getTime();
-
+// Countdown Timer Logic
 function updateCountdown() {
+    const weddingDate = new Date("March 2, 2025 11:30:00").getTime();
     const now = new Date().getTime();
     const timeLeft = weddingDate - now;
 
@@ -28,5 +20,22 @@ function updateCountdown() {
     document.getElementById("seconds").innerText = seconds;
 }
 
+// Update countdown every second
 setInterval(updateCountdown, 1000);
-updateCountdown();
+updateCountdown(); // Initial call to avoid 1-second delay
+
+// Image Slideshow Logic
+const images = [];
+for (let i = 1; i <= 10; i++) {
+    images.push(`images/slide${i}.jpg`);
+}
+
+let currentIndex = 0;
+
+function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("slideImage").src = images[currentIndex];
+}
+
+// Change image every 2 seconds
+setInterval(changeImage, 2000);
